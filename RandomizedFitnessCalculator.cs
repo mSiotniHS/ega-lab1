@@ -3,7 +3,7 @@
 public class RandomizedFitnessCalculator: IFitnessCalculator<string, int>
 {
 	private readonly Dictionary<string, int> _cache = new();
-	private static readonly Random Random = new();
+	private readonly Random _random = new();
 	private readonly int _maxValue;
 
 	public RandomizedFitnessCalculator(int maxValue)
@@ -18,7 +18,7 @@ public class RandomizedFitnessCalculator: IFitnessCalculator<string, int>
 			return _cache[preimage];
 		}
 
-		var fitness = Random.Next(_maxValue);
+		var fitness = _random.Next(_maxValue);
 		_cache.Add(preimage, fitness);
 
 		return fitness;

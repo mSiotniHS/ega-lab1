@@ -18,14 +18,14 @@ public static class MonteCarloMethod
 
 			if (fitness <= bestFitness)
 			{
-				Console.WriteLine("> Рассматриваемая приспособленность не лучше максимальной, пропускаем");
+				Console.WriteLine("> Рассматриваемая приспособленность не лучше имеющейся, пропускаем");
 				continue;
 			}
 
 			bestFitness = fitness;
 			bestWord = word;
 
-			Console.WriteLine("> Рассматриваемая приспособленность лучше максимальной, обновляем");
+			Console.WriteLine("> Рассматриваемая приспособленность лучше имеющейся, обновляем");
 		}
 
 		return (bestWord, bestFitness);
