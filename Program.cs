@@ -9,7 +9,7 @@ internal static class Program
 		DomainTestDrive(domain);
 
 		var (word, fitness) = MonteCarloMethod.FindSolution(domain, 20);
-		Console.WriteLine($"\nНайдённое решение: {word} ({fitness})");
+		Console.WriteLine($"\nНайденное решение: {word} ({fitness})");
 	}
 
 	private static void DomainTestDrive(SearchDomain domain)

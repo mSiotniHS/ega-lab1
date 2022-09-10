@@ -9,23 +9,24 @@ public static class MonteCarloMethod
 
 		for (var i = 0; i < iterationCount; i++)
 		{
-			Console.WriteLine($"\nИтерация №{i}  |  \"Лучшее\" слово: {bestWord} ({bestFitness})");
+			Console.WriteLine($"\nИтерация №{i+1}  |  \"Лучшее\" слово: {bestWord} ({bestFitness})");
 
 			var word = domain.PickRandomWord();
 			var fitness = domain.CalculateFitness(word);
 
 			Console.WriteLine($"> Отобранный кандидат: {word} ({fitness})");
 
-			if (fitness <= bestFitness)
+			if (fitness > bestFitness)
+			{
+				bestFitness = fitness;
+				bestWord = word;
+
+				Console.WriteLine("> Рассматриваемая приспособленность лучше имеющейся, обновляем");
+			}
+			else
 			{
 				Console.WriteLine("> Рассматриваемая приспособленность не лучше имеющейся, пропускаем");
-				continue;
 			}
-
-			bestFitness = fitness;
-			bestWord = word;
-
-			Console.WriteLine("> Рассматриваемая приспособленность лучше имеющейся, обновляем");
 		}
 
 		return (bestWord, bestFitness);
