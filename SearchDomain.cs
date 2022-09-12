@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ega_lab1;
 
-public class SearchDomain
+public sealed class SearchDomain
 {
 	private readonly List<char> _alphabet;
 	private readonly uint _wordLength;

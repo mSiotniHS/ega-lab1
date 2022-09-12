@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace ega_lab1;
 
-public class RandomizedFitnessCalculator: IFitnessCalculator<string, int>
+public sealed class RandomizedFitnessCalculator: IFitnessCalculator<string, int>
 {
 	private readonly Dictionary<string, int> _cache = new();
 	private readonly Random _random = new();
