@@ -1,4 +1,7 @@
-﻿namespace ega_lab1;
+﻿using System;
+using System.Collections.Generic;
+
+namespace ega_lab1;
 
 public class RandomizedFitnessCalculator: IFitnessCalculator<string, int>
 {

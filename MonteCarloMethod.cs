@@ -1,4 +1,6 @@
-﻿namespace ega_lab1;
+﻿using System;
+
+namespace ega_lab1;
 
 public static class MonteCarloMethod
 {
