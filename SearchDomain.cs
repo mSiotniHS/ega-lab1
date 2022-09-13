@@ -16,7 +16,6 @@ public sealed class SearchDomain
 		_alphabet = alphabet;
 		_wordLength = wordLength;
 
-		//var wordCount = Convert.ToInt32(Math.Pow(alphabet.Count, wordLength));
 		_fitnessCalculator = new RandomizedFitnessCalculator(1000);
 	}
 

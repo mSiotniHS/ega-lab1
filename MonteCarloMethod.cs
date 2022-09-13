@@ -11,7 +11,7 @@ public static class MonteCarloMethod
 
 		for (var i = 0; i < iterationCount; i++)
 		{
-			Console.WriteLine($"\nИтерация №{i+1}  |  \"Лучшее\" слово: {bestWord} ({bestFitness})");
+			Console.WriteLine($"\nИтерация №{i+1}  |  Лучшая кодировка: {bestWord} ({bestFitness})");
 
 			var word = domain.PickRandomWord();
 			var fitness = domain.CalculateFitness(word);
