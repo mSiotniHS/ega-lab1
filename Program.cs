@@ -17,7 +17,7 @@ internal static class Program
 
 	private static void DomainTestDrive(SearchDomain domain)
 	{
-		for (int i = 0; i < 32; i++)
+		for (var i = 0; i < 32; i++)
 		{
 			var word = domain.PickRandomWord();
 			var fitness = domain.CalculateFitness(word);
